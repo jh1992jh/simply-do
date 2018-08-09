@@ -1,0 +1,9 @@
+export const SET_CURRENT_USER = 'SET_CURRENT_USER';
+export const GET_TODOS = 'GET_TODOS';
+export const POST_TODO = 'POST_TODO';
+export const DELETE_TODO = 'DELETE_TODO';
+export const TODO_LOADING = 'TODO_LOADING';
+export const UPDATE_DONE = 'UPDATE_DONE';
+export const GET_RANK = 'GET_RANK';
+export const GET_ERRORS = 'GET_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';

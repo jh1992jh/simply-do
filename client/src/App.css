@@ -1,0 +1,625 @@
+/* COMMON STYLES */
+body {
+  height: 100vh;
+
+  font-family: 'Raleway', sans-serif;
+  background: url('https://images.pexels.com/photos/938965/pexels-photo-938965.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')
+    no-repeat;
+  background-size: cover;
+  font-weight: 600;
+  color: #222;
+}
+
+a,
+a:active,
+a:link {
+  text-decoration: none;
+  color: #222;
+}
+
+i,
+button {
+  cursor: pointer;
+}
+
+.forMobile {
+  display: none !important;
+}
+
+.forDesktop {
+  display: block;
+}
+.darkOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(230, 230, 230, 0.7);
+  z-index: -1;
+}
+input,
+input:focus,
+input:active {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.toDoContainer {
+  min-height: 80vh;
+  width: 50vw;
+  margin: auto;
+  z-index: 1;
+  color: #222;
+}
+
+.selected {
+  border-bottom: 2px solid #00a1f1;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 980px) {
+  body {
+    max-height: 100vh;
+  }
+
+  .overlay {
+    height: 100vh;
+  }
+  .toDoContainer {
+    width: 100vw;
+    margin-top: 3em;
+  }
+}
+
+.errorText {
+  color: #dd0000;
+  font-size: 0.8rem;
+  font-weight: 100;
+  text-align: center;
+  margin-top: -0.8em;
+  z-index: 1050;
+}
+
+/* NAVBAR STYLES */
+
+nav {
+  padding: 0 4em;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .navLinksRight {
+  display: flex;
+  align-items: center;
+}
+
+nav .navLinksRight span {
+  margin: 0 1em;
+}
+
+nav .profileInfo {
+  margin-left: -5em;
+}
+
+nav .profileInfo h3 {
+  display: inline-block;
+}
+
+nav .profileInfo .logout {
+  margin: 0 1em;
+  background: transparent;
+  border: 2px solid #222;
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 980px) {
+  .forMobile {
+    display: block;
+  }
+
+  .forDesktop {
+    display: none !important;
+  }
+
+  nav {
+    padding: 0 0.2em;
+  }
+
+  .mobileNav {
+    width: 100vw;
+    position: fixed;
+    background: #e7e7e7;
+    top: 0;
+    left: 0;
+    animation: appearAnim 0.28s;
+  }
+
+  .navMobileTop {
+    display: flex;
+    align-items: center;
+  }
+
+  .navMobileTop .fa-ellipsis-h {
+    font-size: 1.5rem;
+    margin: 0 0.5em 0 auto;
+  }
+
+  .mobileNav .fa-ellipsis-h {
+    display: inline-block;
+  }
+
+  .mobileNav .navDropdown {
+    position: relative;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobileNav .profileInfo {
+    margin: 0 0.5em;
+    width: 100%;
+  }
+
+ 
+
+  .mobileNav .navLinksRight span {
+    margin: 0 0.5em;
+  }
+
+  .mobileNav .profileInfo .logout {
+    margin-left: 8em;
+    
+  }
+}
+
+/* TODOHEADER STYLES */
+.toDoHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  padding: 1em 0;
+}
+
+.toDoHeader .inputContainer {
+  width: 18vw;
+  position: relative;
+}
+
+@media only screen and (min-width: 764px) and (max-width: 1400px) {
+  .toDoHeader .errorText {
+    top: 27%;
+    right: 17%;
+  }
+}
+
+.toDoContainer .toDoHeader .inputContainer input {
+  width: 15vw;
+  border: none;
+  border-bottom: 1px solid #848484;
+  margin: 1em;
+}
+
+.toDoContainer .toDoHeader .inputContainer .description {
+  margin-bottom: 1em;
+}
+
+.toDoContainer .toDoHeader .inputContainer i {
+  margin: 0 0.5em;
+}
+
+.toDoContainer .toDoHeader .inputContainer button {
+  margin-top: 2.8em;
+  border: none;
+  background: #1db954;
+  color: #eee;
+  padding: 0.5em;
+  border-radius: 50px;
+  min-width: 7.5vw;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 980px) {
+  .toDoHeader .inputContainer {
+    width: 40vw;
+  }
+
+  .toDoHeader .errorText {
+    font-size: 0.68rem;
+    top: 30%;
+    left: 0;
+  }
+}
+
+/* TODOLIST STYLES*/
+.toDoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  
+}
+
+.toDoList h3 {
+  text-align: center;
+}
+
+.toDoList .listContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 50vh;
+  overflow-y: auto;
+  padding: 0.5em;
+  
+}
+
+@media only screen and (min-width: 320px) and (max-height: 980px) {
+.toDoList {
+  height: 44.5vh;
+}
+
+.toDoContainer .toDoHeader .inputContainer input {
+  width: 30vw;
+}
+
+.toDoList .listContainer {
+  width: 80vw;
+}
+
+} 
+
+/* TODO STYLES */
+.toDo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0.5em 0;
+  min-height: 8vh;
+  animation: appearAnim 0.28s;
+  opacity: 1;
+  min-width: 40vw;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 980px) {
+  .toDo {
+    display: flex;
+  }
+
+  .toDo p {
+    max-width: 10vw;
+  }
+ /* .toDo p {
+    width: 60vw;
+    cursor: pointer;
+  } */
+}
+
+.toDo p {
+  width: 24vw;
+  cursor: pointer;
+}
+
+.toDo .description {
+  margin: -0.6em 0 0 1.2em;
+  color: #848484;
+  animation: appearAnim 0.28s;
+  opacity: 1;
+}
+
+.toDo .doneBtn,
+.toDo .showDoneModal .doneBtnConfirm {
+  margin: 0 1em;
+  background: transparent;
+  border: 2px solid #1db954;
+  color: #eee;
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  font-weight: 600;
+  background: #1db954;
+}
+
+.toDo .showDoneModalWrapper {
+  background: #eee;
+  min-width: 30vw;
+  min-height: 50vh;
+  position: absolute;
+  top: 20vh;
+  left: 35vw;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+  padding: 1em;
+}
+
+.toDo .showDoneModal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 30vw;
+  max-height: 50vh;
+}
+
+.toDo .showDoneModal .toDoInfo {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.toDo .showDoneModal .toDoInfo {
+  display: block;
+}
+
+.toDo .showDoneModal .fa-times {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem;
+}
+
+.toDo .showDoneModal .doneBtnConfirm {
+  display: block;
+  margin: 0 auto;
+  width: 220px;
+  background: transparent;
+  border: 2px solid #1db954;
+  color: #1db954;
+  padding: 1em 1em;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.showDoneModalWrapper .showDoneModal .deleteBtn {
+  background: transparent;
+  padding: 1em 1em;
+  border: 2px solid #dd0000;
+  border-radius: 50px;
+  width: 220px;
+  font-weight: 600;
+  display: block;
+  margin: 1em auto;
+  color: #dd0000;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 980px) {
+   .showDoneModalWrapper {
+    min-width: 80vw;
+    min-height: 35vh !important;
+    position: absolute;
+    top: 15vh !important;
+    left: 5vw !important;
+
+   }
+  .showDoneModal {
+    min-width: 80vw;
+  }
+
+  .showDoneModalWrapper .showDoneModal .toDoInfo {
+    flex-direction: column;
+    
+    width: 100%;
+  }
+
+  .showDoneModalWrapper .showDoneModal .toDoInfo p {
+    max-width: 100%;
+    
+  }
+
+  .showDoneModalWrapper .showDoneModal .deleteBtn {
+    background: transparent;
+    padding: 1em 1em;
+    border: 2px solid #dd0000;
+    border-radius: 50px;
+    width: 220px;
+    font-weight: 600;
+    display: block;
+    margin: 1em auto;
+    color: #dd0000;
+  }
+}
+@keyframes appearAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.toDo .done {
+  text-decoration: line-through;
+}
+
+.toDo i {
+  margin: 0 0.2em;
+}
+
+.toDo .fa-times    {
+  color: #dd0000;
+}
+/* TODOSEARCH STYLES */
+
+.toDoSearch {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+.searchContainer {
+  border-bottom: 1px solid #848484;
+}
+
+.searchContainer i,
+.searchContainer input {
+  margin-bottom: 0.2em;
+}
+
+.searchContainer i {
+  margin-right: 0.2em;
+  color: #848484;
+}
+
+/* LOGIN STYLES */
+
+.login {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1030;
+}
+
+.login .loginContainer {
+  position: absolute;
+  top: 10vh;
+  left: 34vw;
+  width: 30vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  background: #eee;
+  color: #00a1f1;
+  border-radius: 10px;
+}
+
+.login .selected {
+  border-bottom: 2px solid #00a1f1;
+}
+
+.login .loginHeader {
+  display: flex;
+  justify-content: center;
+}
+
+.login .loginHeader h4 {
+  margin: 1em;
+}
+
+.login .loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.login .loginForm input {
+  margin: 1.5em;
+  display: block;
+  background: #dedede;
+  border: 2px solid #d4d4d4;
+  border-radius: 50px;
+  padding: 1em;
+}
+
+.login .loginForm button {
+  display: block;
+  background: transparent;
+  border-radius: 50px;
+  border: 2px solid #00a1f1;
+  padding: 1em;
+  font-weight: 600;
+  color: #00a1f1;
+  margin: 4em auto 0 auto;
+  width: 60%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 980px) {
+  .forMobile {
+    display: block !important;
+  }
+
+  .login .loginContainer {
+    width: 55vw;
+    height: 60vh;
+    left: 13vw;
+  }
+}
+/* STATISTICS STYLES */
+
+.statistics .toDoContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.statistics .doneTodosColumn,
+.statistics .activeTodosColumn {
+  margin: 0 2em;
+  width: 50vw;
+}
+.statistics .columnHeadContainer {
+  width: 45vw;
+}
+.statistics .toDo {
+  width: 100%;
+}
+.statistics .toDo .icons {
+  margin: 0 1em;
+}
+
+.statistics .columnTodoList {
+  height: 45vh;
+  overflow-y: scroll;
+}
+
+.statistics .columnTodoList p {
+  width: 18vw;
+}
+
+.statistics .achievementsContainer {
+  margin: auto;
+  display: flex;
+  width: 90vw;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 980px) {
+  .columnContainer {
+    display: flex;
+    margin-top: 5em;
+    padding: 1em;
+ 
+  }
+  
+  .columnContainer .tabs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .columnContainer .tabs h3 { 
+    margin: 0 auto;
+  }
+
+   .mobileColumnContainer {
+    padding: 0.5em;
+  }
+
+
+}
+
