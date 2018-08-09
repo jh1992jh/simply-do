@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { getTodos } from '../actions/todoActions';
-import Spinner from '../utilities/Spinner';
+import { getTodos } from '../../actions/todoActions';
+import Spinner from '../../utilities/Spinner';
 import DoneTodosColumn from './DoneTodosColumn';
 import ActiveTodosColumn from './ActiveTodosColumn';
 import ColumnContainerMobile from './ColumnContainerMobile';

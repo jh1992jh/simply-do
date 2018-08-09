@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { deleteTodo, updateDone } from '../actions/todoActions';
+import { deleteTodo, updateDone } from '../../actions/todoActions';
 import { withRouter } from 'react-router-dom';
-import ShowDoneModal from './ShowDoneModal';
+import ShowDoneModal from '../modal/ShowDoneModal';
 
 class Todo extends Component {
   constructor(props) {

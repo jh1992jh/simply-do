@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { postTodo } from '../actions/todoActions';
+import { postTodo } from '../../actions/todoActions';
 
 class ToDoHeader extends Component {
   state = {

@@ -5,12 +5,12 @@ import store from './store';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utilities/setAuthToken';
 import { setCurrentUser, logoutUser } from './actions/authActions';
-import Mainview from './components/Mainview';
-import Login from './components/Login';
-import PrivateRoute from './components/PrivateRoute';
+import Mainview from './components/mainview/Mainview';
+import Login from './components/login/Login';
+import PrivateRoute from './components/privateRoute/PrivateRoute';
 import './App.css';
 import Navbar from './components/navbars/Navbar';
-import Statistics from './components/Statistics';
+import Statistics from './components/statistics/Statistics';
 
 if (localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken);

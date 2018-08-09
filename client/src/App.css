@@ -217,7 +217,7 @@ nav .profileInfo .logout {
 }
 
 .toDoContainer .toDoHeader .inputContainer input {
-  width: 15vw;
+  max-width: 15vw;
   border: none;
   border-bottom: 1px solid #848484;
   margin: 1em;
@@ -245,6 +245,11 @@ nav .profileInfo .logout {
 @media only screen and (min-width: 320px) and (max-width: 980px) {
   .toDoHeader .inputContainer {
     width: 40vw;
+  }
+
+  .toDoHeader .inputContainer input {
+    min-width: 30vw !important;
+    border: 2px solid red;
   }
 
   .toDoHeader .errorText {

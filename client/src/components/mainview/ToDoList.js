@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getTodos } from '../actions/todoActions';
-import Spinner from '../utilities/Spinner';
-import Todo from './Todo';
+import { getTodos } from '../../actions/todoActions';
+import Spinner from '../../utilities/Spinner';
+import Todo from '../todo/Todo';
 
 class ToDoList extends Component {
   componentDidMount() {

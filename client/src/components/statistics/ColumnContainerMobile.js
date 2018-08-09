@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import Todo from './Todo';
-import Spinner from '../utilities/Spinner';
+import Todo from '../todo/Todo';
+import Spinner from '../../utilities/Spinner';
 
 class ColumnContainerMobile extends Component {
   render() {

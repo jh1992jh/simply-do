@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { loginUser, registerUser } from '../actions/authActions';
+import { loginUser, registerUser } from '../../actions/authActions';
 
 class Login extends Component {
   state = {
