@@ -4,7 +4,8 @@
 /node_modules
 /client/node_modules
 
-/config
+
+/config/keys_dev.js
 
 # testing
 /coverage
