@@ -18,10 +18,6 @@ class Todo extends Component {
     };
   }
 
-  componentDidMount() {
-    console.log(this.props.match);
-  }
-
   onToggleDescOpen() {
     const { descOpen } = this.state;
 

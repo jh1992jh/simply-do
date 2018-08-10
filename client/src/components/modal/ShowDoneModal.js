@@ -3,10 +3,6 @@ import { withRouter } from 'react-router-dom';
 import Moment from 'react-moment';
 
 class ShowDoneModal extends Component {
-  componentDidMount()  {
-    console.log(this.props.match)
-  }
-  
   render() {
     const { onToggleDoneModal, onUpdateDone, todo, onDeleteTodo } = this.props;
     const { title, description, _id, createdAt, completedAt } = todo;

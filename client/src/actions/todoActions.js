@@ -13,7 +13,6 @@ export const getTodos = () => dispatch => {
   axios
     .get('/api/todos/')
     .then(res => {
-      console.log(res.data);
       dispatch({
         type: GET_TODOS,
         payload: res.data
